@@ -1,0 +1,75 @@
+Easy GitHub Codespaces Setup: Your App, Postgres, and pgAdmin
+#
+github
+#
+vscode
+#
+docker
+#
+devops
+I'm a big fan of working in containerized development environments. If I'm developing locally, I always dockerize my apps and use VS Code's DevContainers for a clean, isolated setup. But it gets even better with GitHub Codespaces! It takes your entire environment—your app code, database, and admin tools—and puts them in the cloud, accessible right in your web browser through a VS Code-like interface.
+
+If you already use VS Code and DevContainers, you'll feel right at home with Codespaces. It's a seamless way to take your development to the cloud. If you haven't tried DevContainers yet, be sure to check out my short tutorial for a step-by-step guide to setting up a local containerized environment.
+
+What We're Building:
+We're creating a virtual workspace that includes:
+
+Your app: This is the code you're developing. (We'll use a simple example, but you can easily adapt it to your project.)
+Postgres database: This stores your app's data.
+pgAdmin: This handy tool lets you see and manage what's in your database.
+Why GitHub Codespaces?
+Works anywhere: No need to set up your computer; just open a web browser.
+Consistent setup: Your environment is the same every time.
+Easy sharing: Collaborate with others effortlessly.
+How It Works (A Quick Overview)
+We'll use special files to tell GitHub Codespaces how to build our environment:
+
+devcontainer.json: This controls the overall setup.
+docker-compose.yml: This defines our app, database, and pgAdmin.
+Dockerfile: This gives instructions for building our app's container.
+Devteds Github Codespace demo - App, Postgres & pgAdmin
+
+Step-by-Step Guide
+Get the Code:
+Fork this repository in your account and go to that repo: https://github.com/devteds/postgres-pgadmin-on-github-codespace-vscode
+Click "Code" dropdown and then "Create Codespace."
+Devteds Github Codespace demo - Create Codespace nav
+
+Watch the Magic: Codespaces will set everything up. This might take a minute.
+
+Check the Containers:
+A VS Code window will open in your browser.
+Look for the Docker extension to see if everything is running.
+Devteds Github Codespace demo - Docker Extension & Docker-in-Docker Feature
+
+Open pgAdmin:
+In the Ports tab, find the link for pgAdmin.
+It will look like https://-5050.preview.app.github.dev.
+Devteds Github Codespace demo - ports & urls
+
+Log In to pgAdmin:
+Use the username and password from the docker-compose.yml file.
+If you get errors, check the file again; there are special settings for Codespaces.
+Devteds Github Codespace demo - pgAdmin login
+
+Connect to Your Database:
+In pgAdmin, create a new server connection
+Use the details from docker-compose.yml
+Devteds Github Codespace demo - pgAdmin add database server
+
+You're Done! You now have a complete development environment ready to use. Start coding your app, and the database and pgAdmin are right there with you!
+
+Bonus Tip: To learn how to set up your app in the Codespace, check out this tutorial: https://www.devteds.com/devcontainers-for-developers-multi-container-local-dev-setup/
+
+Let me know if you have any questions!
+
+I hope this guide helps you discover the power and convenience of containerized development with DevContainers and GitHub Codespaces. Give them a try and see how they can streamline your workflow! If you have any questions, suggestions, or just want to share your experience, feel free to reach out. Happy coding!
+
+profile
+Bright Data
+Promoted
+
+Image of Bright Data
+
+Overcome Captchas with Ease – Keep your data flow uninterrupted.
+Our Web Unlocker smoothly handles captchas, ensuring your data scraping activities remain productive.
